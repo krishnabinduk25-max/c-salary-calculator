@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+    int ID = 123, enteredID, bSalary;
+    float HRA, DA, did, finalSalary;
+
+    printf("Enter your ID: ");
+    scanf("%d", &enteredID);
+
+    if (enteredID == ID)
+    {
+        printf("Enter your salary: ");
+        scanf("%d", &bSalary);
+
+        HRA = (20.0 / 100) * bSalary;
+        printf("HRA = %.2f\n", HRA);
+
+        DA = (10.0 / 100) * bSalary;
+        printf("DA = %.2f\n", DA);
+
+        did = (5.0 / 100) * bSalary;
+        printf("Deduction = %.2f\n", did);
+
+        finalSalary = bSalary + HRA + DA - did;
+        printf("Final Salary = %.2f\n", finalSalary);
+    }
+    else
+    {
+        printf("Invalid ID\n");
+    }
+
+    return 0;
+}
